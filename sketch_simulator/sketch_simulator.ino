@@ -3,8 +3,6 @@
 // git push origin main || GIT_SSL_NO_VERIFY=true git push origin main
 
 
-// initial commit
-
 void setup() {
   // put your setup code here, to run once:
 
