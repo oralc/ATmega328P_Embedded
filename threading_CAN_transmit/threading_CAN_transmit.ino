@@ -2,7 +2,6 @@ const int interval = 1000; // Interval between message transmissions (millisecon
 unsigned long previousMillis = 0;
 bool isRunning = true; // Control flag for running the simulation
 
-
 void setup() {
   Serial.begin(9600);
   Serial.println("CAN Message Simulator Ready. Type 'start' to begin or 'stop' to halt.");
