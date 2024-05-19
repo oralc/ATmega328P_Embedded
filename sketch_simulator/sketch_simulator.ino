@@ -2,9 +2,12 @@
 // git commit -m "Message"
 // git push origin main || GIT_SSL_NO_VERIFY=true git push origin main
 
-// git config http.sslVerify false
-// git config http.sslVerify false
+// git checkout main
+// git pull origin main
+// git merge <branch-name>
 // Then follow the first 3 steps
+
+
 
 #include <LCD.I2C.h>
 
