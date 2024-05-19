@@ -44,7 +44,7 @@ void loop() {
   lcd.setCursor(0, 0);
   lcd.print("Servus Grias Di!");
   lcd.setCursor(0, 1);
-  lcd.print("PALFINGER");
+  lcd.print("PALFINGER     ");
   delay(4000);
   lcd.setCursor(0, 0);
   lcd.print("Ich bin der Teo");
