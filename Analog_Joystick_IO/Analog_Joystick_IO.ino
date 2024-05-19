@@ -3,6 +3,10 @@
 // VrX >> Analog 0
 // VrY >> Analog 1
 
+
+// Schematic
+// https://exploreembedded.com/wiki/Analog_JoyStick_with_Arduino
+
 // Arduino pin numbers
 const int SW_pin = 2; // digital pin connected to switch output
 const int X_pin = 0; // analog pin connected to X output
