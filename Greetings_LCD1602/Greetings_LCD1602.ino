@@ -9,6 +9,9 @@
  This sketch prints "Greets" the audience as a demonstration of "Welcome Home Funtion" of Pixel Project
  and shows the time elapsed.
 
+  Schematic link:
+  https://toptechboy.com/arduino-tutorial-48-connecting-and-using-an-lcd-display/
+  
   The circuit:
  * LCD RS pin to digital pin 7
  * LCD Enable pin to digital pin 8
