@@ -9,6 +9,11 @@ const int VRx = A0;
 const int VRy = A1;
 const int SW = 2;
 
+// RGB LED Pins
+const int redPin = 3;
+const int greenPin = 4;
+const int bluePin = 5;
+
 // Custom Character
 byte customChar[8] = {
   B11111,
@@ -26,7 +31,12 @@ const int xLeftThreshold = 500;
 const int xRightThreshold = 530;
 const int yBottomThreshold = 300;
 const int yMiddleThreshold = 500;
-const int delay_bounce = 500;
+
+// Colors
+const int RED[3] = {255, 0, 0};
+const int GREEN[3] = {0, 255, 0};
+const int BLUE[3] = {0, 0, 255};
+const int WHITE[3] = {255, 255, 255};
 
 void setup() {
   // set up the LCD's number of columns and rows:
@@ -37,6 +47,11 @@ void setup() {
   pinMode(VRy, INPUT);
   pinMode(SW, INPUT_PULLUP);
 
+  // Initialize the RGB LED pins
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+
   // Create the custom character
   lcd.createChar(0, customChar);
 
@@ -45,6 +60,9 @@ void setup() {
   
   // Initialize Serial communication
   Serial.begin(9600);
+
+  // Set initial LED color to white (neutral)
+  setRGBColor(WHITE);
 }
 
 void loop() {
@@ -68,17 +86,21 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print("Servus Grias Di!");
     lcd.setCursor(0, 1);
-    lcd.print("   PALFINGER   ");
+    lcd.print("PALFINGER     ");
+    setRGBColor(GREEN); // Set RGB LED to Green for welcoming message
     delay(4000);
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print("Ich bin der Teo");
     lcd.setCursor(0, 1);
-    lcd.print("Freut mich!");
+    lcd.print("Freut mich");
     delay(4000);
     lcd.clear(); // Clear the display after showing the message
+    setRGBColor(WHITE); // Set RGB LED to White (Neutral)
     return; // Skip the rest of the loop to avoid flickering
   }
+
+  bool isNeutral = true;
 
   // Determine the display based on yValue
   lcd.clear();
@@ -88,6 +110,8 @@ void loop() {
       lcd.setCursor(col, 1);
       lcd.write(byte(0));
     }
+    setRGBColor(BLUE); // Set RGB LED to Blue for yValue changes
+    isNeutral = false;
   } else if (yValue >= 0 && yValue < yBottomThreshold) {
     // Display custom character on both rows
     for (int row = 0; row < 2; row++) {
@@ -96,6 +120,8 @@ void loop() {
         lcd.write(byte(0));
       }
     }
+    setRGBColor(BLUE); // Set RGB LED to Blue for yValue changes
+    isNeutral = false;
   }
 
   // Determine the display based on xValue
@@ -107,6 +133,8 @@ void loop() {
         lcd.write(byte(0));
       }
     }
+    setRGBColor(RED); // Set RGB LED to Red for xValue changes
+    isNeutral = false;
   } else if (xValue > xRightThreshold) {
     // Display custom character on the right half
     for (int row = 0; row < 2; row++) {
@@ -115,8 +143,22 @@ void loop() {
         lcd.write(byte(0));
       }
     }
+    setRGBColor(RED); // Set RGB LED to Red for xValue changes
+    isNeutral = false;
+  }
+
+  // If joystick is in neutral position
+  if (isNeutral) {
+    setRGBColor(WHITE); // Set RGB LED to White (Neutral)
   }
 
   // Add a small delay to avoid bouncing
-  delay(delay_bounce);
+  delay(500);
+}
+
+// Function to set RGB LED color
+void setRGBColor(const int color[3]) {
+  analogWrite(redPin, color[0]);
+  analogWrite(greenPin, color[1]);
+  analogWrite(bluePin, color[2]);
 }
