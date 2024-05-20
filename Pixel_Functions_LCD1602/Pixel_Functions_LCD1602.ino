@@ -33,9 +33,9 @@ const int yBottomThreshold = 300;
 const int yMiddleThreshold = 500;
 
 // Colors
-const int RED[3] = {255, 0, 0};
+const int BLUE[3] = {255, 0, 0}; //used to be red - changable  
 const int WHITE[3] = {0, 255, 0}; //used to be green - changable  
-const int BLUE[3] = {0, 0, 255};
+const int RED[3] = {0, 0, 255}; //used to be blue - changable  
 const int GREEN[3] = {255, 255, 255}; //used to be white - changable  
 
 // Brightness level (0-255)
@@ -89,12 +89,12 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print("Servus Grias Di!");
     lcd.setCursor(0, 1);
-    lcd.print("PALFINGER     ");
+    lcd.print("   PALFINGER   ");
     setRGBColor(GREEN, brightness); // Set RGB LED to Green for welcoming message
     delay(4000);
     lcd.clear();
     lcd.setCursor(0, 0);
-    lcd.print("Ich bin der Teo");
+    lcd.print("Ich bin der Teo!");
     lcd.setCursor(0, 1);
     lcd.print("Freut mich");
     delay(4000);
