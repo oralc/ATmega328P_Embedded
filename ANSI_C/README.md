@@ -24,5 +24,14 @@ Goals of a software project should be to place as much code into the Application
 ![alt text](image-5.png)
 ![alt text](image-6.png)
 
-// Variable Names
+### Decimal Constant Values in statements
+![alt text](image-7.png)
 
+### Logical Operations
+![alt text](image-10.png)
+
+### Bit-Wise Operations
+![alt text](image-8.png)
+
+### Difference between Logical and Bitwise Operations
+![alt text](image-9.png)
