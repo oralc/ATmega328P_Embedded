@@ -24,5 +24,5 @@ Goals of a software project should be to place as much code into the Application
 ![alt text](image-5.png)
 ![alt text](image-6.png)
 
-
+// Variable Names
 
