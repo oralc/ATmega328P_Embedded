@@ -89,14 +89,14 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print("Servus Grias Di!");
     lcd.setCursor(0, 1);
-    lcd.print("      AVL       ");
+    lcd.print("   Melecs EWS   ");
     setRGBColor(GREEN, brightness); // Set RGB LED to Green for welcoming message
     delay(4000);
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print("Ich bin der Teo!");
     lcd.setCursor(0, 1);
-    lcd.print("Freut mich");
+    lcd.print("   Freut mich!  ");
     delay(4000);
     lcd.clear(); // Clear the display after showing the message
     setRGBColor(WHITE, brightness); // Set RGB LED to White (Neutral)
