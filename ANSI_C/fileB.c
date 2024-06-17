@@ -2,7 +2,7 @@
 #define _FILE_B
 #include "fileC.h"
 
-static int y;
+static int y; /* y is global only within this file */
 
 void functionName (void);
 

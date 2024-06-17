@@ -98,3 +98,19 @@ skipped. However, it differs from break in that the loop continues to execute.
 Example 2.44 After the loop executes in this example, i == 10 and x == 4
 ![alt text](image-22.png)
 
+### Scope Rules
+It is considered good coding practice to make global functions and variables available via
+header files, as example below:
+![alt text](image-24.png)
+Then other files will use this header  file to communicate global information to each other, When other files A or B contain the following code 
+fileA 
+    #include include include "fileC.h"
+
+fileB
+    #define _FILE_B
+    #include include include "fileC.h"
+By placing the #define _FILE_B in fileB.c before the header file is included, it causes the
+preprocessor to define a blank macro. This causes the compiler to allocate the necessary memory for
+variable x. fileA.c simply includes the header file without defining anything, and so x is declared
+as an external variable within that file.
+>> The keyword **static**  limits the scope of a global variable to just within the file declaring it.
