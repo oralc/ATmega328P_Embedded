@@ -113,4 +113,21 @@ By placing the #define _FILE_B in fileB.c before the header file is included, it
 preprocessor to define a blank macro. This causes the compiler to allocate the necessary memory for
 variable x. fileA.c simply includes the header file without defining anything, and so x is declared
 as an external variable within that file.
+
 >> The keyword **static**  limits the scope of a global variable to just within the file declaring it.
+Below, in the first call to the test() function initiliazes i == 0,
+In the next call it is not re-initiliazed to zero, instead, it cointains the value it had when the function exited previosly (i.e: 1).
+![alt text](image-25.png)
+
+### Example Coding Convention Rules
+![alt text](image-26.png)
+
+### Variable keywords
+>> register int x ; 
+Meaning, advises compiler that variable will be accesed a lot and should be placed in machine register
+>> volatile int x ;
+Meaning, so it can be useful when you want to trick compiler into preserving some statements that you dint want removed. Compiler is then unable to optimize certain statements due to memory caching
+
+
+
+ 
