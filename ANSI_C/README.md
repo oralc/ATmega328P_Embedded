@@ -114,3 +114,16 @@ preprocessor to define a blank macro. This causes the compiler to allocate the n
 variable x. fileA.c simply includes the header file without defining anything, and so x is declared
 as an external variable within that file.
 >> The keyword **static**  limits the scope of a global variable to just within the file declaring it.
+
+## Pointers and Arrays
+Pointer contain an address usually of an another variable
+**To Define** a pointer 
+'p = &c;'
+Now p is the adress of the "c"
+![alt text](image-27.png)
+
+**To Declare** 
+'char *p'
+'short *q'
+'long *r'
+Pointers can be created for many types such as (to other pointers, to functions, to any type of array, to structre type)
