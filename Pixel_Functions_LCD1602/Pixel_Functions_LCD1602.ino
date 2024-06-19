@@ -89,7 +89,7 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print("Servus Grias Di!");
     lcd.setCursor(0, 1);
-    lcd.print("   Melecs EWS   ");
+    lcd.print(" ");
     setRGBColor(GREEN, brightness); // Set RGB LED to Green for welcoming message
     delay(4000);
     lcd.clear();
