@@ -1,8 +1,11 @@
 #include "fileC.h"
+#include <stdio.h>
 
-extern void functionName(void);
+//extern void functionName(void);
 
-void main(void){
+int main(void){
     x = 0;
-    functionName();
+    //functionName();
+    
+    printf("This is an example!");
 }
