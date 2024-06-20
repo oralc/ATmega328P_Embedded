@@ -115,6 +115,7 @@ variable x. fileA.c simply includes the header file without defining anything, a
 as an external variable within that file.
 
 >> The keyword **static**  limits the scope of a global variable to just within the file declaring it.
+<<<<<<< HEAD
 Below, in the first call to the test() function initiliazes i == 0,
 In the next call it is not re-initiliazed to zero, instead, it cointains the value it had when the function exited previosly (i.e: 1).
 ![alt text](image-25.png)
@@ -131,3 +132,18 @@ Meaning, so it can be useful when you want to trick compiler into preserving som
 
 
  
+=======
+
+## Pointers and Arrays
+Pointer contain an address usually of an another variable
+**To Define** a pointer 
+'p = &c;'
+Now p is the adress of the "c"
+![alt text](image-27.png)
+
+**To Declare** 
+'char *p'
+'short *q'
+'long *r'
+Pointers can be created for many types such as (to other pointers, to functions, to any type of array, to structre type)
+>>>>>>> 52777760508df83270beecd5c92ebcdd2ce80784
