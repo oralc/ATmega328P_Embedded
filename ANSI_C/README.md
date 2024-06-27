@@ -147,3 +147,34 @@ Now p is the adress of the "c"
 'long *r'
 Pointers can be created for many types such as (to other pointers, to functions, to any type of array, to structre type)
 
+```
+short *p;
+short a[10];
+
+p = &(a[2]);
+
+/* followings are correct*/
+*(p) = a[2];
+*(p+1) = a[3];
+
+```
+
+## Compiling
+```
+gcc -o hi.c hi -Wall
+```
+>> -o : allows to give a name to the compiled c program, otherwise default it named as "a"
+>> -Wall : indicated that gcc should warn about many types of suspicious code that are likely to be incorrect
+
+## Dynamic Memory Allocation
+We can dynamically allocate memory at run-time and have the base be referred via pointer.
+That means compiler doesnot reverse the consecutive bytes of memory as for am array decleration. 
+Instead, CPU is directed to find a block of consecitive bytes in memory that are not being used dand return the base address.
+>> malloc : Allocates size bytes of uninitilialized (garbage value) storage
+>> calloc : Allocates memory for an array of num objects of size and initializes all bytes to 0
+>> free : De-allocates previously allocated memory
+
+**! Warning** : If you don't "free" the dynamic memory, it causes *"memory leak"* which means repeated call to the function will consume all of the available memory, then program crashes.
+
+**! Warning** : Run-Time Allocation is not the best practice in embedded programs since even in PC applications, with all of the powerful debugging tools, it is still hard to track down the *leaks*. Embedded systems tools are quite limited and mostly debugging an embedded memory is exceptionally diffucult.
+
