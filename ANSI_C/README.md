@@ -146,4 +146,4 @@ Now p is the adress of the "c"
 'short *q'
 'long *r'
 Pointers can be created for many types such as (to other pointers, to functions, to any type of array, to structre type)
->>>>>>> 52777760508df83270beecd5c92ebcdd2ce80784
+
