@@ -178,3 +178,76 @@ Instead, CPU is directed to find a block of consecitive bytes in memory that are
 
 **! Warning** : Run-Time Allocation is not the best practice in embedded programs since even in PC applications, with all of the powerful debugging tools, it is still hard to track down the *leaks*. Embedded systems tools are quite limited and mostly debugging an embedded memory is exceptionally diffucult.
 
+```
+#include <stdio.h>   
+#include <stdlib.h> 
+ 
+int main(void) 
+{
+    int *p1 = malloc(4*sizeof(int));  // allocates enough for an array of 4 int
+    int *p2 = malloc(sizeof(int[4])); // same, naming the type directly
+    int *p3 = malloc(4*sizeof *p3);   // same, without repeating the type name
+ 
+    if(p1) {
+        for(int n=0; n<4; ++n) // populate the array
+            p1[n] = n*n;
+        for(int n=0; n<4; ++n) // print it back out
+            printf("p1[%d] == %d\n", n, p1[n]);
+    }
+ 
+    free(p1);
+    free(p2);
+    free(p3);
+}
+```
+
+### Multi-Dimensional Arrays
+```
+#define MAX_ROWS 2
+#define MAX_COLS 3
+
+const short table[MAX_ROWS][MAX_COLS] = {
+    {1,2,3,4,5},
+    {6,7,8,9,10}
+};
+
+Followings are true:
+table[0][1] == 2;
+table[1][4] == 10;
+
+
+```
+**Decleration**
+```
+return_type (* variableName)(argument_list);
+```
+
+Ex:
+```
+int (*comp) (void*, void*) ;
+char * (* weird) (void) ;
+```
+>> Variable ***comp*** is a pointer to a function that returns an ***int*** and takes ***two generic pointers***
+>> Variable ***weird*** is a pointer to a function that returns an ***char pointer*** and takes ***no arguments***
+
+## Structure
+Collection of one or more variable, possible of different types grouper together under a single name for convenient handling.
+Similar to "classes" in C++
+
+Definition/Notation
+```
+struct TagPoint
+{
+    int x;
+    int y;
+}
+```
+**Build a Structure with another Structure**
+```
+struct TagRectangle{
+    struct TagPoint upperLeft;
+    struct TagPoint lowerRight;
+};
+
+struct TagRectangle polygon;
+polygon.
