@@ -34,14 +34,24 @@
 
 >> **Indentation** : Every conde inside a block should be intended
 
->> Comments
+>> **Comments**
 ```- // Single line comment```
 - /* Multi 
 - line   
 - comment*/
 
+>> **Data Type Modifiers**
+- short: 2 bytes, -32.768 bis +32.767. 2 to the power of 16
+- int: 4 bytes
+- long: 8 bytes
 
+>> **const** : are read-only variables , must be initialized at decleration and not allowed to be changed.
+- Therefore, some compiler can optimize 
+- ```const data_type var_name = value;```
+-  ```const int name = 5;```
+-  ```const char letter = 'A';```
 
+>> **#define** L 
 
 
 
