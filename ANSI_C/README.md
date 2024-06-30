@@ -1,3 +1,50 @@
+### Wiki: 
+
+>> **return 0 ;** It is a indicator that program succeeded, done by ***exit status***
+
+>> **Compiling** : ```gcc -o hii hello.c -Wall ```
+- -o enable you to name the complied file
+- -Wall enable you to be warned about the suspicious code
+- To run: ./
+
+>> **Statement**: are the text that will be turned into executable instructions. 
+- ``int i = 3;``
+- ";" has to be placed at the end of statement
+
+>> **Whitespace** it surrounds the statements to organize the code which is ignored by the compiler.
+
+>> **Scope** : There 2 types of scope
+-*** Local Scope***: can be manipualted only within the block it was declerad
+- **Glocal Scope:** can be manipulated from anywhere in the program.
+
+>> **Functions** : special block that performs a well-defined task. It usually returns a value to the caller.
+
+>> **Compiling** : It is basically a native compiler read every source code and translate everthing into machine code that is comprehensible to a microprocessor.
+- It comes with 2 problem. 
+- 1. in the large project the compuler may not have enought memory to read all the source code.
+- 2. If you make a change in a single source code you have to recompile the entire application.
+- Solution: Use of Object Files and Linker.
+- **Object File:** occurs when each .c file is translated into machine code with its references (#include)
+- **Linker** collects all the objects files and writes a actual program. If you can change only a file, then only that file needs to be re-compiled and re-linked.
+
+
+>> **Preprocessor** : Directive instruct a part of the compiler the to modify the code written before it is compiled. For example: it is used in #include <stdio.h> or functions that are used after main().
+
+>> **Line Breks:** : After precompiler declerations. After new variable are declared.
+
+>> **Indentation** : Every conde inside a block should be intended
+
+>> Comments
+```- // Single line comment```
+- /* Multi 
+- line   
+- comment*/
+
+
+
+
+
+
 ### Digital Logic Fundatmentals
 ![alt text](image.png)
 
@@ -6,6 +53,7 @@ Suppose you are given {N}2 = (00100110) but not told the order. The meaning of t
 
 ### Representing negative values in Binary
 **Two's Complement**: Let n = 8. The representation for 77 is (01001101), just like in all other cases. To get -77 in the two’s complement code, we negate the number, which means we invert all the bits and add 1, so (10110011).
+
 
 ## ANSI C
 - If we write software using only ANSI C, then it will build to run on any target platform with ANSI C compiler.
