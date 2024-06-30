@@ -250,4 +250,4 @@ struct TagRectangle{
 };
 
 struct TagRectangle polygon;
-polygon.
+polygon.upperLeftCorner.x = 320;
