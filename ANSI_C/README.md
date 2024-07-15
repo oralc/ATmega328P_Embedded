@@ -16,6 +16,7 @@
 >> **Scope** : There 2 types of scope
 -*** Local Scope***: can be manipualted only within the block it was declerad
 - **Glocal Scope:** can be manipulated from anywhere in the program.
+- Global variables are not considered good programming practice, and should be avoided whenever possible. They inhibit code readability, create naming conflicts, waste memory,   and can create difficult-to-trace bugs
 
 >> **Functions** : special block that performs a well-defined task. It usually returns a value to the caller.
 
@@ -51,7 +52,16 @@
 -  ```const int name = 5;```
 -  ```const char letter = 'A';```
 
->> **#define** L 
+>> **#define** used to create -macros- in case of they are used in the rest of the code then they will replaced by the specified expression
+- It is good convention to write #defined words in all capitals, so a programmer will know that this is not a variable that you have declared but a #defined macro.
+
+>> **Static** variables preserve their values after even after they are out of its scope. Meaning, they retain their value from previous state, not initialized again.
+- ```static data_type var_name = value ;```
+- Alttough they are keeping its state even it is out of its scope, it cannot be accessed in out of scope. So-called ***static storage duration.***
+- They are initiazed as 0 (garbage value) when they not initialized.
+
+
+
 
 
 
