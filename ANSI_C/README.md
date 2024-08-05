@@ -57,8 +57,11 @@
 
 >> **Static** variables preserve their values after even after they are out of its scope. Meaning, they retain their value from previous state, not initialized again.
 - ```static data_type var_name = value ;```
-- Alttough they are keeping its state even it is out of its scope, it cannot be accessed in out of scope. So-called ***static storage duration.***
-- They are initiazed as 0 (garbage value) when they not initialized.
+- Alttough they are keeping its state even it is out of its scope, it cannot be accessed from out of scope. So-called ***static storage duration.***
+- They are initiazed as 0 (garbage value) when they not.
+- Cannot access the function or variable through the extern (see below). so called ***static_linkage***
+
+
 
 
 
