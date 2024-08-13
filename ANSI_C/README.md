@@ -62,8 +62,88 @@
 - Cannot access the function or variable through the extern (see below). so called ***static_linkage***
 
 
+>> **extern** it is used when the variable should be accessed from another file that it may not have #included directly. By default value is zero. It lasts till the program comes to an end.
 
+>> **volatile** special case that indicates compiler that the variable can be change by external entities othere than the program itself. I.e: optimization problems. Espacially relavant in embedded systems since a program may not have complete control of a varible and multi-threaded applications.
 
+>> **auto** local to the block that is defined and persist till the control remains within, by default it is garbege value.
+
+>> **register** it is hint to the compiler to attempt to optimize the storage of the given variable.
+
+>> **Error Handling**
+- preveting 0 division error: 
+if (divisor == 0 ){
+    fprintf(stderr, "Division by 0")
+    exit(EXIT_FAILURE);
+}
+
+- ***singnals*** : are event that raised by operating systems to indicate specific errors or event has occured(division_by_zero, interrupts and so on..)
+
+- ***setjump*** : can be used to emulate the exception of handling feature of other languages. setjump() and longjpm() may used for error handling, but also for often cases they are used for returning a value of a funtion to indicate a possible error.
+
+### Simple I/O
+Placeholder codes, 
+%d : int, same as %i
+%lf : long int 
+%f : float
+%lf : double
+%c : char
+%s : string
+%x : hexadecimal
+- printf() : requires stdio.h used to put text. String called argument. printf("2+2 is '%d'", 2+2)
+- puts() : specialised printf that only outputs string
+- scanf() : used for inputs and requires a memory address of the varible that is coming from inputter.
+    simplified example: "
+    int main(void){
+
+        int a; 
+        scanf("%d", &a)
+    }
+
+### Type Casting
+
+float pi = 3.141592;
+int truncated_pi = (int)pi; // truncated_pi == 3
+
+char my_char = 'A';
+int my_int = (int)my_char; // my_int == 65, which is the ASCII value of 'A'
+
+### Bitwise Operators
+Provides simplier and faster way to implement arithmetic operations and directly supported by processor.
+![alt text](image-29.png) 
+??ni
+
+### Further Math
+- **Trigonometric functions** A range error occurs if the magnitude of x is too large.
+#include <math.h> 
+float asinf(float x)
+float acosf(float x)
+atan() : returns arctan value of its arguments
+atan2() : return the arctangent of y/x in radians
+
+- **Exponential and logarithmic function**
+#include <math.h>
+float logf(float x); /* C99 */
+double log(double x);
+The exp functions compute the base-e exponential function of x (e^  x). 
+float expf(float x); /* C99 */
+double exp(double x);
+
+- **Power functions** : Compute x raised to the power y and return the result. A domain error
+occurs if x is negative and y is not an integral value. A domain error occurs if the result
+cannot be represented when x is zero and y is less than or equal to zero. A range error may
+occur.
+
+#include <math.h>
+float powf(float x, float y); /* C99 */
+double pow(double x, double y);
+
+- **Nearest Integer, absolute value, reminden functions**
+Ceil & Floor Functions
+float ceilf(float x);
+double ceil(double x);
+float floorf(float x);
+double ceil(double x);
 
 
 
@@ -200,8 +280,6 @@ Meaning, advises compiler that variable will be accesed a lot and should be plac
 >> volatile int x ;
 Meaning, so it can be useful when you want to trick compiler into preserving some statements that you dint want removed. Compiler is then unable to optimize certain statements due to memory caching
 
-
-
  
 =======
 
@@ -230,10 +308,14 @@ p = &(a[2]);
 
 ```
 
-## Compiling
+### Compiling
 ```
-gcc -o hi.c hi -Wall
+gcc -o hi hi.c -Wall
+
 ```
+### Running 
+./hi
+
 >> -o : allows to give a name to the compiled c program, otherwise default it named as "a"
 >> -Wall : indicated that gcc should warn about many types of suspicious code that are likely to be incorrect
 
