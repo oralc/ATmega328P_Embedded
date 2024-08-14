@@ -138,12 +138,40 @@ occur.
 float powf(float x, float y); /* C99 */
 double pow(double x, double y);
 
-- **Nearest Integer, absolute value, reminden functions**
+- **Nearest Integer, absolute value, reminder functions**
 Ceil & Floor Functions
+```
+#include <math.h>
 float ceilf(float x);
 double ceil(double x);
 float floorf(float x);
 double ceil(double x);
+
+float fabsf(float x);  // fabs function compute the absoloute value
+double fabs(double x);
+
+float fmodf(float x, float y);
+double modf(double x, double y);
+```
+
+
+## Control
+C treats logic as being arithmetic, meaning zero (0) represents false, all other values represent true, 
+For decision with multiple logical expressions the first expresseion has to be true for interpreting the other express.
+
+### Bitwise Boolean Operations
+Bitwise operators work bit by bit on the operands.
+
+- a & b -AND
+- 0xc & 0xa produces the value 0x8 (in binary, 1100 & 1010 produces 1000)
+
+- a | b -OR
+- 0xc | 0xa produces the value 0xe (in binary, 1100 | 1010 produces 1110)
+
+- a ^ b -XOR
+- if inputs are the same then outputs are 0 otherwise 1
+- 0xc ^ 0xa produces the value 0x6 (in binary, 1100 ^ 1010 produces 0110)
+
 
 
 
