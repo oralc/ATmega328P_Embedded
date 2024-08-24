@@ -21,7 +21,7 @@
 >> **Functions** : special block that performs a well-defined task. It usually returns a value to the caller.
 
 >> **Compiling** : It is basically a native compiler read every source code and translate everthing into machine code that is comprehensible to a microprocessor.
-- It comes with 2 problem. 
+- It comes with 2 problems: 
 - 1. in the large project the compuler may not have enought memory to read all the source code.
 - 2. If you make a change in a single source code you have to recompile the entire application.
 - Solution: Use of Object Files and Linker.
@@ -172,8 +172,33 @@ Bitwise operators work bit by bit on the operands.
 - if inputs are the same then outputs are 0 otherwise 1
 - 0xc ^ 0xa produces the value 0x6 (in binary, 1100 ^ 1010 produces 0110)
 
+### If-else
 
+```
+if (conditions goes here){
 
+}
+else if (){
+
+}
+else{
+
+}
+
+```
+
+### Switch - Case
+```
+switch (/* integer or enum goes here */) {
+case /* potential value of the aforementioned int or enum */:
+/* code */
+case /* a different potential value */:
+/* different code */
+/* insert additional cases as needed */
+default:
+/* more code */
+}
+```
 
 
 ### Digital Logic Fundatmentals
@@ -184,6 +209,8 @@ Suppose you are given {N}2 = (00100110) but not told the order. The meaning of t
 
 ### Representing negative values in Binary
 **Two's Complement**: Let n = 8. The representation for 77 is (01001101), just like in all other cases. To get -77 in the two’s complement code, we negate the number, which means we invert all the bits and add 1, so (10110011).
+![alt text](image-30.png)
+
 
 
 ## ANSI C
