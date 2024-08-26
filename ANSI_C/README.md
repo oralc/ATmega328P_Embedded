@@ -200,6 +200,31 @@ default:
 }
 ```
 
+### Loops
+It is handy when you want to execute a certain action for certain amount of time until a certain condition is met.
+
+### While Loop
+```
+int a = 1;
+
+while(42){ // loop untill break statement in the loop is executed
+    printf("a is %d ", a);
+    a = a * 2;
+    if (a > 100) {
+        break;
+    } else if (a == 64) {
+        continue; // Immediately restarts at while, skips next step
+    }
+}
+```
+
+### For Loops
+for (){
+    // code here
+}
+
+
+
 
 ### Digital Logic Fundatmentals
 ![alt text](image.png)
