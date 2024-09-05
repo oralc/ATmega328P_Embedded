@@ -223,7 +223,17 @@ for (){
     // code here
 }
 
+### Do - While 
+it is a while loop but it runs at least once even  while is not met
+```
+do {
+/* do stuff */
+} while (condition);
+```
 
+## Procedures and Functions
+Functions can be called several times and from several places. 
+Function's inputs are known as arguments.
 
 
 ### Digital Logic Fundatmentals
@@ -237,6 +247,7 @@ Suppose you are given {N}2 = (00100110) but not told the order. The meaning of t
 ![alt text](image-30.png)
 
 
+// cont 101 -- Wiki C
 
 ## ANSI C
 - If we write software using only ANSI C, then it will build to run on any target platform with ANSI C compiler.
@@ -484,3 +495,6 @@ struct TagRectangle{
 
 struct TagRectangle polygon;
 polygon.upperLeftCorner.x = 320;
+
+
+## 
