@@ -26,10 +26,28 @@ Microcontrollers can operate in binary numbers in 8, 16, 32 bits. 8 bit is a byt
 For humans, things are simplified and used ***hexadecimal*** which use base 16 and its values is selected from the set {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}
 To express hex, we put ***0x*** or ***$*** before the number to mean hex.
 A **"nibble"** is defined as 4 binary bits or one hexadecimal digit or half of byte. Each nibble below assigned to one hex digit.
+![alt text](image-31.png)
+
+Example:
+- 0x12AD = 1*16^3 + 2*16^2 + 10*16^1 13*16^0
+
+8 bit DAC can generate 256 different analog outputs.
+8 bit ADC can generate 256 different digital outputs.
+
+A byte contains 8 bits where each bit b7,...,b0 is binary and has the value 1 or 0. We specify b7 as the most significant bit or MSB, and b0 as the least significant bit or LSB.
+
+## 2.2 Embedded System : Embedded Mcrocomputer System
+In embedded systems
+- ROM : for storing SW and fixed constant data
+- RAM : for temporary info 
+- Flash EEPROM : Electrically erasable programmable is used in Embedded microcomputers
+
+Example: SW of the digital watch is stored in ROM (nonvolatile), that's why watch behaves like watch after re-inserting its battery.
+
+>> Microcontoller refers to microcomputer incorporating processor, RAM, ROM I/O ports into a single package.
+
+>> I/O devices : parellel ports, serial ports, timers, DAC, ADC,     
 
 
-
-
-
-
- 
+*** Embedded Systems ***
+ ![alt text](image-32.png)
