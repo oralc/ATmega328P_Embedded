@@ -44,10 +44,52 @@ In embedded systems
 
 Example: SW of the digital watch is stored in ROM (nonvolatile), that's why watch behaves like watch after re-inserting its battery.
 
->> Microcontoller refers to microcomputer incorporating processor, RAM, ROM I/O ports into a single package.
+>> Microcontoller  == Single chip computer by incorporating processor, RAM, ROM I/O ports into a single package to perform specific tasks (Ardunio)
 
->> I/O devices : parellel ports, serial ports, timers, DAC, ADC,     
+>> Microcomputer == Small- complete computer that includes a processor, memory and I/O devices. (RasPi)
+
+>> Microprocessor -- only a single processor (Intel, AMD)
+
+>> I/O devices ==  parellel ports, serial ports, timers, DAC, ADC,     
+
+>> Interface == allows computer to communicate with external hardware
+
+**Classification of I/O Interfaces**
+- Parallel interface: multiple data lines allowing for simultanaeously transmission of multiple bits of data.
+- Serial interface: data is transmitted one bit at a time over a single data line. Simplier, slower, cheaper, more scalable.
+- Analog interfaces: Transmit continious data, typically seen in a systems that interact with physical world (sensors and actuators, temparatur)
+- Time-encoded interface: rely on timind of signals instead of binary representation.
 
 
-*** Embedded Systems ***
+*** Embedded System Schema1 ***
  ![alt text](image-32.png)
+
+
+**Drive Driver**
+A set of software functions facilitates I/O interface. Ports are collection of pins, usually 8, which can be either input/output.
+If input: SW gets 8 bits (boolean) representing high or low
+If output: SW writes
+
+**Real-Time**
+Upper bound on the time to perform the "input-calculation-output" sequence. This response time interface called ***latency***.
+
+**Execution of Periodic Tasks**
+A periodic task must be performed at equal-time intervals.
+
+**SW Maintanence**
+Includes: Validation, adding feature, updates, fixing bugs
+Simulation is also important as we rate to build better machines with shorter design cycles.
+The effective approach to build an embedded systen is to design using a hardware/sw simulator and download and test the system on actual microcontroller
+
+
+### Introduction to Computers*
+Computer combines : Processor, RAM, ROM, I/O ports.
+
+Neumann Achitecture
+![alt text](image-33.png)
+
+Port: is a physical connection between computer and outside world
+Microcontroller: contains all the components of computer in a single chip.
+
+The computer can store information in RAM by writing to it, or it can retrieve previously stored data by reading from it. RAMs are volatile; meaning if power is interrupted and restored the information in the RAM is lost. Most microcontrollers have static RAM (SRAM) using six metal-oxide-semiconductor field-effect transistors (MOS or MOSFET) to create each memory bit. Four transistors are used to create two cross-coupled inverters that store the binary information, and the other two are used to read and write the bit.
+
