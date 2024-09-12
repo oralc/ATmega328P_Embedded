@@ -82,7 +82,7 @@ Simulation is also important as we rate to build better machines with shorter de
 The effective approach to build an embedded systen is to design using a hardware/sw simulator and download and test the system on actual microcontroller
 
 
-### Introduction to Computers*
+### 2.3 Introduction to Computers*
 Computer combines : Processor, RAM, ROM, I/O ports.
 
 Neumann Achitecture
@@ -90,6 +90,19 @@ Neumann Achitecture
 
 Port: is a physical connection between computer and outside world
 Microcontroller: contains all the components of computer in a single chip.
+RAM store information by writing to it, or it can retrieve previously stored data by reading from it. RAMs are volatile; meaning if power is interrupted and restored the information in the RAM is lost.
 
-The computer can store information in RAM by writing to it, or it can retrieve previously stored data by reading from it. RAMs are volatile; meaning if power is interrupted and restored the information in the RAM is lost. Most microcontrollers have static RAM (SRAM) using six metal-oxide-semiconductor field-effect transistors (MOS or MOSFET) to create each memory bit. Four transistors are used to create two cross-coupled inverters that store the binary information, and the other two are used to read and write the bit.
 
+### 2.4 I/O Ports
+External devices attached to MCU for functionality.
+A pin is a wire on MCU for i/o.
+A port is a collection of pins.
+A Interface is collection of I/O port, external electronics, pysical device and SW which allow computer to communicate world.
+Example input interface : Switch for toggling / output : LED 
+
+
+I/O interfaces categorized into 4:
+- Parallel : binary data avaliable simultaneously on a group of lines 
+- Serial : binary data avaliable one bit at a time on a single line
+- Analog: 
+- Time: 
