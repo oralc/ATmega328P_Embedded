@@ -6,7 +6,7 @@ Electrical eng. concepts include Ohms Law, LED voltage/current, resistance measu
 Computer engineering concepts include I/O device drivers, debugging, stacks, FIFO queues, local variables and interrupts.
 The hardware construction is performed on breadboards and debugging using a multimeter (measuring voltage).
 SW developed in C, always first simulation then run on microcontroller. 
-SW debugging occurs during simulation. Verification occurs in both stages.
+SW debugging occurs during simulation. Verification ocgcurs in both stages.
 
 # C2 - Fundamental Concepts
 
@@ -105,5 +105,6 @@ Example input interface : Switch for toggling / output : LED
 I/O interfaces categorized into 4:
 - Parallel : binary data avaliable simultaneously on a group of lines 
 - Serial : binary data avaliable one bit at a time on a single line
-- Analog: 
-- Time: 
+- Analog: data are encoded as electrical voltage, current or power
+- Time: data are encoded as period, frequency , pulse width or phase shift
+
