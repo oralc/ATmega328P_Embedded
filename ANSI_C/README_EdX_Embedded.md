@@ -106,5 +106,8 @@ I/O interfaces categorized into 4:
 - Parallel : binary data avaliable simultaneously on a group of lines 
 - Serial : binary data avaliable one bit at a time on a single line
 - Analog: data are encoded as electrical voltage, current or power
-- Time: data are encoded as period, frequency , pulse width or phase shift
+- Time: data are encoded as period, frequency , pulse width or phase shift.
+
+![alt text](image-34.png)
+
 
