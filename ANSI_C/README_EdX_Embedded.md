@@ -110,4 +110,6 @@ I/O interfaces categorized into 4:
 
 ![alt text](image-34.png)
 
+### 2.5 CPU Registers
 
+Registers are high-speed storage inside the processor. 
