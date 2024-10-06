@@ -1,4 +1,5 @@
 # C1 - Intro
+>> Main source: https://users.ece.utexas.edu/~valvano/Volume1/E-Book/
 > https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C1_EmbeddedSystemsShapeTheWorld.htm
 ADC and DAC are the methods to bridge computers with electronics.
 Electrical eng. concepts include Ohms Law, LED voltage/current, resistance measurement and motor control.
