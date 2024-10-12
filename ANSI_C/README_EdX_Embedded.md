@@ -23,6 +23,7 @@ Therefore systems nowadays should employ, parallel programming, high-speed synch
 Example of decimal number system:
 - 273.15 = 2•10^2 + 7•10^1 + 3•10^0 + 1•10^-1 + 5•10^-2
 
+### Demo Title
 Microcontrollers can operate in binary numbers in 8, 16, 32 bits. 8 bit is a byte.
 For humans, things are simplified and used ***hexadecimal*** which use base 16 and its values is selected from the set {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}
 To express hex, we put ***0x*** or ***$*** before the number to mean hex.
