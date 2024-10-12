@@ -121,12 +121,57 @@ Registers are high-speed storage inside the processor.
 
 
 # Extra - SW Testing (TESSY)
-
+## Hitex TESSY Video Lesson 1
 **Unit** : In C, functions are units
 **Stub Function** : simplified and temproraily replacement of a real code to simulate the functions's behaviour
 
-**Unit Testing with TESSY**
+
+### Unit Testing with TESSY**
 - Tessy analyzes the source code
 - List the possbile ***test objects***
-- Determines the ***interfaces*** of each test object 
+- Determines the ***interfaces*** of each test object
+- Executes the test and able to generate test report
+- If there is fail case in the test, add breakpoints and re-run to active debugger to find out why it fails 
+- After fixing the bug, re-execute test and check if change in code cause another fail or not (regression test) and check if the initially failed test now it is passed.
 
+
+
+### Code Coverage 
+- Code covarage is need to be done in safety critical applications.
+- From the settings of "Test Execution test" assign Covarage cases.
+    - For IEC 61508 Standart the following are meausured:
+        - Entry Point coverage
+        - Statement coverage
+        - Branch covarege
+        - Modified condition / Decision coverage
+
+- See the uncovered part of the SW with flowchart via CV window. 
+
+> End of Hitex TESSY Video Lesson 1
+
+## Unit testing for safety-critical applications
+https://www.youtube.com/watch?v=j-fVngGHNYI&list=PLOpcCJMW1XQphGBqfHVajwIXgX9E0GKby
+
+
+## Code Coverage Measurement with TESSY
+
+**Entry Point (Function) Coverage :**
+- In C, functions are entry points, simply mesaure if the functions are called during executions or not.
+
+
+**Statement Coverage (Anweisungsüberdeckung):**
+- Checks how many of the existing statements are tested/executed
+- is a weak measure 
+
+**Branch Coverage (Zweigüberdeckung):**
+- Measures the percentage of branches(if,else,switch) that are tested.
+
+**Decision Coverage (Enscheidungsüberdeckung):**
+- Check if each decision of the if conditions is tested.
+- Similar to branch coverage 
+ 
+ **Condition Coverage (or Predicate Coverage):**
+ - Measures each boolean (sub-expression) in a decision evaluated for both ***true*** and ***false***.
+ - Example: 
+    ```if ((quantity > 10 && price < 100) || discount > 0)```
+    to avoid short-circuit evaluation, since if discount part is true, the conditions will be true becase of the or expression. But   be bug in the code regarding price and quantity.
