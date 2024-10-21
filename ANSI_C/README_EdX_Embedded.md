@@ -19,7 +19,7 @@ Why embedded systems are evolving, growing and getting more complexier:
 - system verification for safety critical applications
 Therefore systems nowadays should employ, parallel programming, high-speed synch, RTOS, fault tolerant design, priority interrupt handling and networking.
 
-## 2.1 Binary Number Systems
+## 2.1 Binary Number Systemsdie
 Example of decimal number system:
 - 273.15 = 2•10^2 + 7•10^1 + 3•10^0 + 1•10^-1 + 5•10^-2
 
@@ -111,7 +111,6 @@ I/O interfaces categorized into 4:
 ![alt text](image-34.png)
 
 ### 2.5 CPU Registers
-
 Registers are high-speed storage inside the processor. 
 
 
@@ -155,8 +154,9 @@ https://www.youtube.com/watch?v=j-fVngGHNYI&list=PLOpcCJMW1XQphGBqfHVajwIXgX9E0G
 
 ## Code Coverage Measurement with TESSY
 
-**Entry Point (Function) Coverage :**
+**Entry Point Coverage :**
 - In C, functions are entry points, simply mesaure if the functions are called during executions or not.
+- If this is a integration test it is called (Function Coverage)
 
 
 **Statement Coverage (Anweisungsüberdeckung):**
